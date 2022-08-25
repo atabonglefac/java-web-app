@@ -9,7 +9,9 @@ pipeline {
   stages {
     stage('Scan') {
       steps {
-        withSonarQubeEnv(installationName: 'sonar') 
+        withSonarQubeEnv(installationName: 'sonar') { 
+          sh 'sonar:sonar'
+        }  
       }
     }
   }
