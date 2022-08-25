@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Scan') {
       steps {
-        withSonarQubeEnv(installationName: '/opt/sonar-scanner') { 
+        withSonarQubeEnv(installationName: 'sonarqube9.6') { 
           sh './mvnw clean sonar:sonar'
         }
       }
